@@ -10,10 +10,10 @@
 #SBATCH --output=slurm/out/1n2g.out
 #SBATCH --error=slurm/out/1n2g.err
 
-export PYTHONPATH="/mnt/cephfs/home/ckoutlis/code/mutli-node-slurm"
-cd /mnt/cephfs/home/ckoutlis/code/mutli-node-slurm
-source /mnt/cephfs/home/ckoutlis/.bashrc
-source /mnt/cephfs/home/ckoutlis/anaconda3/bin/activate
+export PYTHONPATH="$HOME/code/mutli-node-slurm"
+cd $HOME/code/mutli-node-slurm
+source $HOME/.bashrc
+source $HOME/anaconda3/bin/activate
 conda activate mns
 
 echo "SLURM_JOB_NAME: $SLURM_JOB_NAME"
@@ -41,4 +41,4 @@ srun --nodes=$SLURM_NNODES --ntasks-per-node=1 \
     torchrun \
     --nnodes=$SLURM_NNODES \
     --nproc_per_node=$NUM_GPUS \
-    /mnt/cephfs/home/ckoutlis/code/mutli-node-slurm/train.py
+    $HOME/code/mutli-node-slurm/train.py

@@ -10,10 +10,10 @@
 #SBATCH --output=slurm/out/connect.out
 #SBATCH --error=slurm/out/connect.err
 
-export PYTHONPATH="/mnt/cephfs/home/ckoutlis/code/mutli-node-slurm"
-cd /mnt/cephfs/home/ckoutlis/code/mutli-node-slurm
-source /mnt/cephfs/home/ckoutlis/.bashrc
-source /mnt/cephfs/home/ckoutlis/anaconda3/bin/activate
+export PYTHONPATH="$HOME/code/mutli-node-slurm"
+cd $HOME/code/mutli-node-slurm
+source $HOME/.bashrc
+source $HOME/anaconda3/bin/activate
 conda activate mns
 
 echo "Starting non-interactive network debugging script..."
@@ -79,4 +79,4 @@ srun --nodes=$SLURM_NNODES --ntasks-per-node=1 \
     --rdzv_id=$SLURM_JOBID \
     --rdzv_backend=c10d \
     --rdzv_endpoint=$MASTER_ADDR:$MASTER_PORT \
-    /mnt/cephfs/home/ckoutlis/code/mutli-node-slurm/train.py
+    $HOME/code/mutli-node-slurm/train.py
