@@ -1,0 +1,9 @@
+Connection to 10.105.205.24 29523 port [tcp/*] succeeded!
+/mnt/cephfs/home/ckoutlis/anaconda3/envs/mns/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py:258: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /opt/conda/conda-bld/pytorch_1724789115765/work/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+/mnt/cephfs/home/ckoutlis/anaconda3/envs/mns/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py:258: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /opt/conda/conda-bld/pytorch_1724789115765/work/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+/mnt/cephfs/home/ckoutlis/anaconda3/envs/mns/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py:258: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /opt/conda/conda-bld/pytorch_1724789115765/work/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+/mnt/cephfs/home/ckoutlis/anaconda3/envs/mns/lib/python3.10/site-packages/torch/_subclasses/functional_tensor.py:258: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /opt/conda/conda-bld/pytorch_1724789115765/work/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))

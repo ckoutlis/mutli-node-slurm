@@ -1,0 +1,110 @@
+SLURM_JOB_NAME: 2n1gpn
+SLURM_JOBID: 18018
+SLURM_NODELIST: iti-51-[49,154]
+SLURM_NNODES: 2
+SLURM_GPUS_PER_NODE: rtx_4090:1
+SLURM_NTASKS_PER_NODE: 1
+==================================================
+MASTER_ADDR: 10.105.205.24
+MASTER_PORT: 29518
+==================================================
+NUM_GPUS_PER_NODE: 1
+Process 1 successfully initialized.
+Process 0 successfully initialized.
+Process 1 (local_rank 0) is using device cuda:0
+Process 0 (local_rank 0) is using device cuda:0
+iti-51-154:12132:12132 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-49:5445:5445 [0] NCCL INFO cudaDriverVersion 12080
+iti-51-154:12132:12132 [0] NCCL INFO Bootstrap : Using enp3s0:10.105.205.26<0>
+iti-51-49:5445:5445 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-154:12132:12132 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+iti-51-49:5445:5445 [0] NCCL INFO Bootstrap : Using enp3s0:10.105.205.24<0>
+iti-51-154:12132:12132 [0] NCCL INFO cudaDriverVersion 12080
+iti-51-49:5445:5445 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+NCCL version 2.20.5+cuda12.1
+iti-51-49:5445:5453 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-49:5445:5453 [0] NCCL INFO NET/IB : No device found.
+iti-51-49:5445:5453 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-49:5445:5453 [0] NCCL INFO NET/Socket : Using [0]enp3s0:10.105.205.24<0>
+iti-51-49:5445:5453 [0] NCCL INFO Using non-device net plugin version 0
+iti-51-49:5445:5453 [0] NCCL INFO Using network Socket
+iti-51-49:5445:5453 [0] NCCL INFO comm 0x651fb5e495c0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0xb6ff3db89b9257d2 - Init START
+iti-51-154:12132:12141 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-49:5445:5453 [0] NCCL INFO comm 0x651fb5e495c0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+iti-51-154:12132:12141 [0] NCCL INFO NET/IB : No device found.
+iti-51-49:5445:5453 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+iti-51-154:12132:12141 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-49:5445:5453 [0] NCCL INFO P2P Chunksize set to 131072
+iti-51-154:12132:12141 [0] NCCL INFO NET/Socket : Using [0]enp3s0:10.105.205.26<0>
+iti-51-49:5445:5453 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+iti-51-154:12132:12141 [0] NCCL INFO Using non-device net plugin version 0
+iti-51-49:5445:5453 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+iti-51-154:12132:12141 [0] NCCL INFO Using network Socket
+iti-51-49:5445:5453 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+iti-51-154:12132:12141 [0] NCCL INFO comm 0x56f6078439e0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 2000 commId 0xb6ff3db89b9257d2 - Init START
+iti-51-49:5445:5453 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+iti-51-154:12132:12141 [0] NCCL INFO comm 0x56f6078439e0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+iti-51-154:12132:12141 [0] NCCL INFO Channel 00/02 :    0   1
+iti-51-154:12132:12141 [0] NCCL INFO Channel 01/02 :    0   1
+iti-51-154:12132:12141 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+iti-51-154:12132:12141 [0] NCCL INFO P2P Chunksize set to 131072
+iti-51-154:12132:12141 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+iti-51-154:12132:12141 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+iti-51-154:12132:12141 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+iti-51-49:5445:5453 [0] NCCL INFO Connected all rings
+iti-51-154:12132:12141 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+iti-51-49:5445:5453 [0] NCCL INFO Connected all trees
+iti-51-154:12132:12141 [0] NCCL INFO Connected all rings
+iti-51-49:5445:5453 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+iti-51-154:12132:12141 [0] NCCL INFO Connected all trees
+iti-51-49:5445:5453 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+iti-51-154:12132:12141 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+iti-51-49:5445:5453 [0] NCCL INFO comm 0x651fb5e495c0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0xb6ff3db89b9257d2 - Init COMPLETE
+iti-51-154:12132:12141 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+iti-51-154:12132:12141 [0] NCCL INFO comm 0x56f6078439e0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 2000 commId 0xb6ff3db89b9257d2 - Init COMPLETE
+
+Rank 0 Epoch 1/10, Average Loss: 1.1331
+
+Rank 1 Epoch 1/10, Average Loss: 1.0010
+
+
+Rank 1 Epoch 2/10, Average Loss: 0.9645
+Rank 0 Epoch 2/10, Average Loss: 1.0790
+
+Rank 1 Epoch 3/10, Average Loss: 0.8966
+
+Rank 0 Epoch 3/10, Average Loss: 1.0172
+
+Rank 1 Epoch 4/10, Average Loss: 0.9443
+
+Rank 0 Epoch 4/10, Average Loss: 1.0287
+
+Rank 1 Epoch 5/10, Average Loss: 0.8338
+
+Rank 0 Epoch 5/10, Average Loss: 0.9980
+
+Rank 0 Epoch 6/10, Average Loss: 0.9921
+
+Rank 1 Epoch 6/10, Average Loss: 1.0407
+
+Rank 1 Epoch 7/10, Average Loss: 0.9471
+
+Rank 0 Epoch 7/10, Average Loss: 1.0007
+
+Rank 0 Epoch 8/10, Average Loss: 1.0283
+
+Rank 1 Epoch 8/10, Average Loss: 0.8937
+
+Rank 0 Epoch 9/10, Average Loss: 1.0556
+
+Rank 1 Epoch 9/10, Average Loss: 0.9451
+
+
+Rank 1 Epoch 10/10, Average Loss: 0.8612
+Rank 0 Epoch 10/10, Average Loss: 1.0260
+iti-51-49:5445:5454 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+iti-51-154:12132:12142 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+iti-51-49:5445:5458 [0] NCCL INFO comm 0x651fb5e495c0 rank 1 nranks 2 cudaDev 0 busId 1000 - Abort COMPLETE
+[Rank 1] Cleanup complete.
+iti-51-154:12132:12146 [0] NCCL INFO comm 0x56f6078439e0 rank 0 nranks 2 cudaDev 0 busId 2000 - Abort COMPLETE
+[Rank 0] Cleanup complete.

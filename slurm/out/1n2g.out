@@ -1,0 +1,57 @@
+SLURM_JOB_NAME: 1n2g
+SLURM_JOBID: 18017
+SLURM_NODELIST: iti-50-107
+SLURM_NNODES: 1
+SLURM_GPUS_PER_NODE: rtx_4080:2
+SLURM_NTASKS_PER_NODE: 2
+==================================================
+MASTER_ADDR: iti-50-107
+MASTER_PORT: 29517
+==================================================
+NUM_GPUS_PER_NODE: 2
+Process 0 successfully initialized.
+Process 1 successfully initialized.
+Process 0 (local_rank 0) is using device cuda:0
+Process 1 (local_rank 1) is using device cuda:1
+
+Rank 1 Epoch 1/10, Average Loss: 1.1437
+
+Rank 0 Epoch 1/10, Average Loss: 1.1797
+
+Rank 1 Epoch 2/10, Average Loss: 1.0403
+
+Rank 0 Epoch 2/10, Average Loss: 0.9874
+
+Rank 1 Epoch 3/10, Average Loss: 0.9954
+
+Rank 0 Epoch 3/10, Average Loss: 0.9263
+
+Rank 0 Epoch 4/10, Average Loss: 0.9816
+
+Rank 1 Epoch 4/10, Average Loss: 1.1048
+
+Rank 1 Epoch 5/10, Average Loss: 1.1743
+
+Rank 0 Epoch 5/10, Average Loss: 0.9490
+
+Rank 0 Epoch 6/10, Average Loss: 1.0369
+
+Rank 1 Epoch 6/10, Average Loss: 1.0545
+
+Rank 0 Epoch 7/10, Average Loss: 0.9405
+
+Rank 1 Epoch 7/10, Average Loss: 1.0244
+
+Rank 0 Epoch 8/10, Average Loss: 1.0164
+
+Rank 1 Epoch 8/10, Average Loss: 1.0821
+
+Rank 1 Epoch 9/10, Average Loss: 1.0767
+
+Rank 0 Epoch 9/10, Average Loss: 0.9071
+
+Rank 0 Epoch 10/10, Average Loss: 0.9788
+
+Rank 1 Epoch 10/10, Average Loss: 1.1270
+[Rank 1] Cleanup complete.
+[Rank 0] Cleanup complete.
