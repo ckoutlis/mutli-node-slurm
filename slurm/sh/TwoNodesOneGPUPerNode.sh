@@ -40,8 +40,7 @@ echo "NUM_GPUS_PER_NODE: $NUM_GPUS"
 export NCCL_SOCKET_IFNAME=$(ip addr show | awk '/inet 10.*brd/{print $NF}')
 export NCCL_DEBUG=INFO
 
-srun --nodes=$SLURM_NNODES --ntasks-per-node=1 \
-    torchrun \
+torchrun \
     --nnodes=$SLURM_NNODES \
     --nproc_per_node=$NUM_GPUS \
     --rdzv_id=$SLURM_JOBID \

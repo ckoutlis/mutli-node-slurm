@@ -68,14 +68,19 @@ srun --nodes=$SLURM_NNODES --ntasks-per-node=1 \
     '
 echo "=================================================="
 
+NUM_GPUS=$SLURM_GPUS_PER_NODE
+if [[ $SLURM_GPUS_PER_NODE == *:* ]]; then
+    NUM_GPUS=$(echo $SLURM_GPUS_PER_NODE | awk -F: '{print $NF}')
+fi
+echo "NUM_GPUS_PER_NODE: $NUM_GPUS"
+
 export NCCL_SOCKET_IFNAME=$(ip addr show | awk '/inet 10.*brd/{print $NF}')
 export NCCL_DEBUG=INFO
 
 echo "Attempting to run the PyTorch distributed job..."
-srun --nodes=$SLURM_NNODES --ntasks-per-node=1 \
-    torchrun \
+torchrun \
     --nnodes=$SLURM_NNODES \
-    --nproc_per_node=1 \
+    --nproc_per_node=$NUM_GPUS \
     --rdzv_id=$SLURM_JOBID \
     --rdzv_backend=c10d \
     --rdzv_endpoint=$MASTER_ADDR:$MASTER_PORT \

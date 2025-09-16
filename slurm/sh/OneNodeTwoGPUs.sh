@@ -3,7 +3,7 @@
 #SBATCH --job-name=1n2g
 #SBATCH --nodes=1
 #SBATCH --gpus-per-node=rtx_4080:2
-#SBATCH --ntasks-per-node=2
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=5G
 #SBATCH --time=00:30:00
@@ -37,8 +37,9 @@ if [[ $SLURM_GPUS_PER_NODE == *:* ]]; then
 fi
 echo "NUM_GPUS_PER_NODE: $NUM_GPUS"
 
-srun --nodes=$SLURM_NNODES --ntasks-per-node=1 \
-    torchrun \
+torchrun \
     --nnodes=$SLURM_NNODES \
     --nproc_per_node=$NUM_GPUS \
+    --master_addr=$MASTER_ADDR \
+    --master_port=$MASTER_PORT \
     $HOME/code/mutli-node-slurm/train.py
