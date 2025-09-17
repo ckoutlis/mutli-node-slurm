@@ -1,135 +1,136 @@
 Starting non-interactive network debugging script...
-SLURM_JOBID: 18023
-SLURM_NODELIST: iti-51-[49,154]
+SLURM_JOBID: 18237
+SLURM_NODELIST: iti-51-[49,152]
 ==================================================
 MASTER_ADDR: 10.105.205.24
-MASTER_PORT: 29523
+MASTER_PORT: 29737
 ==================================================
 Running ping tests from master node (10.105.205.24) to all other nodes...
 Pinging iti-51-49...
 PING iti-1152.mever.local (10.105.205.24) 56(84) bytes of data.
-64 bytes from iti-51-49 (10.105.205.24): icmp_seq=1 ttl=64 time=0.015 ms
-64 bytes from iti-51-49 (10.105.205.24): icmp_seq=2 ttl=64 time=0.031 ms
-64 bytes from iti-51-49 (10.105.205.24): icmp_seq=3 ttl=64 time=0.026 ms
+64 bytes from iti-51-49 (10.105.205.24): icmp_seq=1 ttl=64 time=0.016 ms
+64 bytes from iti-51-49 (10.105.205.24): icmp_seq=2 ttl=64 time=0.027 ms
+64 bytes from iti-51-49 (10.105.205.24): icmp_seq=3 ttl=64 time=0.028 ms
 
 --- iti-1152.mever.local ping statistics ---
-3 packets transmitted, 3 received, 0% packet loss, time 2026ms
-rtt min/avg/max/mdev = 0.015/0.024/0.031/0.006 ms
+3 packets transmitted, 3 received, 0% packet loss, time 2070ms
+rtt min/avg/max/mdev = 0.016/0.023/0.028/0.005 ms
 Ping to iti-51-49 successful.
-Pinging iti-51-154...
-PING iti-1177.mever.local (10.105.205.26) 56(84) bytes of data.
-64 bytes from 10.105.205.26: icmp_seq=1 ttl=64 time=0.110 ms
-64 bytes from 10.105.205.26: icmp_seq=2 ttl=64 time=0.151 ms
-64 bytes from 10.105.205.26: icmp_seq=3 ttl=64 time=0.162 ms
+Pinging iti-51-152...
+PING iti-1176.mever.local (10.105.205.25) 56(84) bytes of data.
+64 bytes from 10.105.205.25: icmp_seq=1 ttl=64 time=0.107 ms
+64 bytes from 10.105.205.25: icmp_seq=2 ttl=64 time=0.143 ms
+64 bytes from 10.105.205.25: icmp_seq=3 ttl=64 time=0.119 ms
 
---- iti-1177.mever.local ping statistics ---
-3 packets transmitted, 3 received, 0% packet loss, time 2003ms
-rtt min/avg/max/mdev = 0.110/0.141/0.162/0.022 ms
-Ping to iti-51-154 successful.
+--- iti-1176.mever.local ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2045ms
+rtt min/avg/max/mdev = 0.107/0.123/0.143/0.015 ms
+Ping to iti-51-152 successful.
 ==================================================
-Running netcat (nc) tests for TCP connectivity on port 29523...
-Master node (iti-51-49) listening on port 29523...
-Node (iti-51-154) connecting to master (10.105.205.24) on port 29523...
-Connection from iti-51-154 to 10.105.205.24 successful.
+Running netcat (nc) tests for TCP connectivity on port 29737...
+Master node (iti-51-49) listening on port 29737...
+Node (iti-51-152) connecting to master (10.105.205.24) on port 29737...
+Connection from iti-51-152 to 10.105.205.24 successful.
 Master node nc listener terminated.
 ==================================================
+NUM_GPUS_PER_NODE: 1
 Attempting to run the PyTorch distributed job...
 Process 1 successfully initialized.
 Process 0 successfully initialized.
-Process 0 (local_rank 0) is using device cuda:0
 Process 1 (local_rank 0) is using device cuda:0
-iti-51-154:13122:13122 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
-iti-51-154:13122:13122 [0] NCCL INFO Bootstrap : Using enp3s0:10.105.205.26<0>
-iti-51-49:6736:6736 [0] NCCL INFO cudaDriverVersion 12080
-iti-51-154:13122:13122 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
-iti-51-49:6736:6736 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
-iti-51-154:13122:13122 [0] NCCL INFO cudaDriverVersion 12080
-iti-51-49:6736:6736 [0] NCCL INFO Bootstrap : Using enp3s0:10.105.205.24<0>
+Process 0 (local_rank 0) is using device cuda:0
+iti-51-152:141659:141659 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-152:141659:141659 [0] NCCL INFO Bootstrap : Using enp3s0:10.105.205.25<0>
+iti-51-152:141659:141659 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+iti-51-152:141659:141659 [0] NCCL INFO cudaDriverVersion 12080
 NCCL version 2.20.5+cuda12.1
-iti-51-49:6736:6736 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
-iti-51-49:6736:6743 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
-iti-51-49:6736:6743 [0] NCCL INFO NET/IB : No device found.
-iti-51-49:6736:6743 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
-iti-51-49:6736:6743 [0] NCCL INFO NET/Socket : Using [0]enp3s0:10.105.205.24<0>
-iti-51-49:6736:6743 [0] NCCL INFO Using non-device net plugin version 0
-iti-51-49:6736:6743 [0] NCCL INFO Using network Socket
-iti-51-154:13122:13130 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
-iti-51-154:13122:13130 [0] NCCL INFO NET/IB : No device found.
-iti-51-154:13122:13130 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
-iti-51-154:13122:13130 [0] NCCL INFO NET/Socket : Using [0]enp3s0:10.105.205.26<0>
-iti-51-49:6736:6743 [0] NCCL INFO comm 0x63cf751dbbe0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0x251ad36b96891dd5 - Init START
-iti-51-154:13122:13130 [0] NCCL INFO Using non-device net plugin version 0
-iti-51-49:6736:6743 [0] NCCL INFO comm 0x63cf751dbbe0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
-iti-51-49:6736:6743 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
-iti-51-49:6736:6743 [0] NCCL INFO P2P Chunksize set to 131072
-iti-51-154:13122:13130 [0] NCCL INFO Using network Socket
-iti-51-49:6736:6743 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
-iti-51-154:13122:13130 [0] NCCL INFO comm 0x5da1b3033120 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 2000 commId 0x251ad36b96891dd5 - Init START
-iti-51-49:6736:6743 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
-iti-51-154:13122:13130 [0] NCCL INFO comm 0x5da1b3033120 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
-iti-51-49:6736:6743 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
-iti-51-154:13122:13130 [0] NCCL INFO Channel 00/02 :    0   1
-iti-51-49:6736:6743 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
-iti-51-154:13122:13130 [0] NCCL INFO Channel 01/02 :    0   1
-iti-51-154:13122:13130 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
-iti-51-154:13122:13130 [0] NCCL INFO P2P Chunksize set to 131072
-iti-51-154:13122:13130 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
-iti-51-154:13122:13130 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
-iti-51-154:13122:13130 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
-iti-51-154:13122:13130 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
-iti-51-154:13122:13130 [0] NCCL INFO Connected all rings
-iti-51-49:6736:6743 [0] NCCL INFO Connected all rings
-iti-51-49:6736:6743 [0] NCCL INFO Connected all trees
-iti-51-154:13122:13130 [0] NCCL INFO Connected all trees
-iti-51-49:6736:6743 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
-iti-51-49:6736:6743 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
-iti-51-154:13122:13130 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
-iti-51-154:13122:13130 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
-iti-51-49:6736:6743 [0] NCCL INFO comm 0x63cf751dbbe0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0x251ad36b96891dd5 - Init COMPLETE
-iti-51-154:13122:13130 [0] NCCL INFO comm 0x5da1b3033120 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 2000 commId 0x251ad36b96891dd5 - Init COMPLETE
+iti-51-49:60738:60738 [0] NCCL INFO cudaDriverVersion 12080
+iti-51-49:60738:60738 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-49:60738:60738 [0] NCCL INFO Bootstrap : Using enp3s0:10.105.205.24<0>
+iti-51-49:60738:60738 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+iti-51-49:60738:60744 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-49:60738:60744 [0] NCCL INFO NET/IB : No device found.
+iti-51-49:60738:60744 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-49:60738:60744 [0] NCCL INFO NET/Socket : Using [0]enp3s0:10.105.205.24<0>
+iti-51-49:60738:60744 [0] NCCL INFO Using non-device net plugin version 0
+iti-51-49:60738:60744 [0] NCCL INFO Using network Socket
+iti-51-152:141659:141667 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-152:141659:141667 [0] NCCL INFO NET/IB : No device found.
+iti-51-152:141659:141667 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to enp3s0
+iti-51-152:141659:141667 [0] NCCL INFO NET/Socket : Using [0]enp3s0:10.105.205.25<0>
+iti-51-152:141659:141667 [0] NCCL INFO Using non-device net plugin version 0
+iti-51-152:141659:141667 [0] NCCL INFO Using network Socket
+iti-51-49:60738:60744 [0] NCCL INFO comm 0x60d138143010 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 2000 commId 0x548008f4328fe7b6 - Init START
+iti-51-152:141659:141667 [0] NCCL INFO comm 0x5a364b1aaed0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0x548008f4328fe7b6 - Init START
+iti-51-49:60738:60744 [0] NCCL INFO comm 0x60d138143010 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+iti-51-152:141659:141667 [0] NCCL INFO comm 0x5a364b1aaed0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+iti-51-49:60738:60744 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+iti-51-152:141659:141667 [0] NCCL INFO Channel 00/02 :    0   1
+iti-51-152:141659:141667 [0] NCCL INFO Channel 01/02 :    0   1
+iti-51-152:141659:141667 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+iti-51-152:141659:141667 [0] NCCL INFO P2P Chunksize set to 131072
+iti-51-49:60738:60744 [0] NCCL INFO P2P Chunksize set to 131072
+iti-51-49:60738:60744 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+iti-51-49:60738:60744 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+iti-51-49:60738:60744 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+iti-51-49:60738:60744 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+iti-51-152:141659:141667 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+iti-51-152:141659:141667 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+iti-51-152:141659:141667 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+iti-51-152:141659:141667 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+iti-51-152:141659:141667 [0] NCCL INFO Connected all rings
+iti-51-152:141659:141667 [0] NCCL INFO Connected all trees
+iti-51-49:60738:60744 [0] NCCL INFO Connected all rings
+iti-51-152:141659:141667 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+iti-51-152:141659:141667 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+iti-51-49:60738:60744 [0] NCCL INFO Connected all trees
+iti-51-49:60738:60744 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+iti-51-49:60738:60744 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+iti-51-152:141659:141667 [0] NCCL INFO comm 0x5a364b1aaed0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0x548008f4328fe7b6 - Init COMPLETE
+iti-51-49:60738:60744 [0] NCCL INFO comm 0x60d138143010 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 2000 commId 0x548008f4328fe7b6 - Init COMPLETE
 
 
-Rank 1 Epoch 1/10, Average Loss: 1.2643
-Rank 0 Epoch 1/10, Average Loss: 1.1634
+Rank 0 Epoch 1/10, Average Loss: 1.2179
+Rank 1 Epoch 1/10, Average Loss: 1.0728
 
 
-Rank 1 Epoch 2/10, Average Loss: 1.0036
-Rank 0 Epoch 2/10, Average Loss: 0.9671
+Rank 1 Epoch 2/10, Average Loss: 0.9348
+Rank 0 Epoch 2/10, Average Loss: 1.0512
+
+Rank 0 Epoch 3/10, Average Loss: 1.0448
+
+Rank 1 Epoch 3/10, Average Loss: 0.9001
 
 
-Rank 1 Epoch 3/10, Average Loss: 0.9556
-Rank 0 Epoch 3/10, Average Loss: 0.9275
-
-Rank 0 Epoch 4/10, Average Loss: 1.0988
-
-Rank 1 Epoch 4/10, Average Loss: 0.9004
+Rank 0 Epoch 4/10, Average Loss: 0.9711
+Rank 1 Epoch 4/10, Average Loss: 0.9325
 
 
-Rank 0 Epoch 5/10, Average Loss: 0.9840
-Rank 1 Epoch 5/10, Average Loss: 0.9402
+Rank 0 Epoch 5/10, Average Loss: 1.0623
+Rank 1 Epoch 5/10, Average Loss: 0.9419
 
 
-Rank 0 Epoch 6/10, Average Loss: 1.0131
-Rank 1 Epoch 6/10, Average Loss: 0.9796
+Rank 0 Epoch 6/10, Average Loss: 0.9702
+Rank 1 Epoch 6/10, Average Loss: 0.9152
+
+Rank 0 Epoch 7/10, Average Loss: 1.0592
+
+Rank 1 Epoch 7/10, Average Loss: 0.9695
 
 
-Rank 1 Epoch 7/10, Average Loss: 1.0361
-Rank 0 Epoch 7/10, Average Loss: 1.0446
+Rank 0 Epoch 8/10, Average Loss: 1.0125
+Rank 1 Epoch 8/10, Average Loss: 0.9077
 
 
-Rank 1 Epoch 8/10, Average Loss: 1.0394
-Rank 0 Epoch 8/10, Average Loss: 1.0008
+Rank 0 Epoch 9/10, Average Loss: 1.0262
+Rank 1 Epoch 9/10, Average Loss: 0.9199
 
 
-Rank 1 Epoch 9/10, Average Loss: 0.9626
-Rank 0 Epoch 9/10, Average Loss: 1.0263
-
-
-Rank 1 Epoch 10/10, Average Loss: 1.0001
-Rank 0 Epoch 10/10, Average Loss: 1.0830
-iti-51-49:6736:6744 [0] NCCL INFO [Service thread] Connection closed by localRank 0
-iti-51-154:13122:13131 [0] NCCL INFO [Service thread] Connection closed by localRank 0
-iti-51-49:6736:6748 [0] NCCL INFO comm 0x63cf751dbbe0 rank 1 nranks 2 cudaDev 0 busId 1000 - Abort COMPLETE
-iti-51-154:13122:13135 [0] NCCL INFO comm 0x5da1b3033120 rank 0 nranks 2 cudaDev 0 busId 2000 - Abort COMPLETE
+Rank 0 Epoch 10/10, Average Loss: 0.9264
+Rank 1 Epoch 10/10, Average Loss: 0.9505
+iti-51-152:141659:141668 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+iti-51-49:60738:60745 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+iti-51-49:60738:60749 [0] NCCL INFO comm 0x60d138143010 rank 1 nranks 2 cudaDev 0 busId 2000 - Abort COMPLETE
+iti-51-152:141659:141672 [0] NCCL INFO comm 0x5a364b1aaed0 rank 0 nranks 2 cudaDev 0 busId 1000 - Abort COMPLETE
 [Rank 1] Cleanup complete.
 [Rank 0] Cleanup complete.

@@ -78,7 +78,8 @@ export NCCL_SOCKET_IFNAME=$(ip addr show | awk '/inet 10.*brd/{print $NF}')
 export NCCL_DEBUG=INFO
 
 echo "Attempting to run the PyTorch distributed job..."
-torchrun \
+srun --nodes=$SLURM_NNODES --ntasks-per-node=$SLURM_NTASKS_PER_NODE \
+    torchrun \
     --nnodes=$SLURM_NNODES \
     --nproc_per_node=$NUM_GPUS \
     --rdzv_id=$SLURM_JOBID \

@@ -37,7 +37,8 @@ if [[ $SLURM_GPUS_PER_NODE == *:* ]]; then
 fi
 echo "NUM_GPUS_PER_NODE: $NUM_GPUS"
 
-torchrun \
+srun --nodes=$SLURM_NNODES --ntasks-per-node=$SLURM_NTASKS_PER_NODE \
+    torchrun \
     --nnodes=$SLURM_NNODES \
     --nproc_per_node=$NUM_GPUS \
     --master_addr=$MASTER_ADDR \
